@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "buildCommand": "prisma generate",
+  "outputDirectory": "public",
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/sync" }
+  ],
+  "functions": {
+    "api/sync.js": { "maxDuration": 10, "memory": 256 }
+  }
+}
